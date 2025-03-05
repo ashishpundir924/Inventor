@@ -1,0 +1,9 @@
+' Get the active document
+Dim oDoc As PartDocument
+oDoc = ThisApplication.ActiveDocument
+
+' Loop through all 3D Sketches and hide them
+Dim oSketch As Sketch3D
+For Each oSketch In oDoc.ComponentDefinition.Sketches3D
+    oSketch.Visible = False
+Next
